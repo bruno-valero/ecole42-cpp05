@@ -6,7 +6,7 @@
 /*   By: bruno-valero <bruno-valero@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 23:36:26 by bruno-valer       #+#    #+#             */
-/*   Updated: 2026/03/01 01:20:08 by bruno-valer      ###   ########.fr       */
+/*   Updated: 2026/03/01 18:37:43 by bruno-valer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,11 @@ void					ShrubberyCreationForm::execute(const Bureaucrat &bureucrat)
 	}
 	file << "Tree(" << getTarget() << ")" << std::endl;
 	file.close();
+};
+
+AForm					*ShrubberyCreationForm::clone(const char *target) const
+{
+	if (!target)
+		return (new ShrubberyCreationForm(*this));
+	return (new ShrubberyCreationForm(target));
 };

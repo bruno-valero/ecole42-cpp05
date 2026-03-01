@@ -42,3 +42,10 @@ void					RobotomyRequestForm::execute(const Bureaucrat &bureucrat)
 	std::cout << "RrrrrrRRRrrrRRR! ";
 	std::cout << getTarget() << " foi robotomizado com sucesso!" << std::endl;
 };
+
+AForm					*RobotomyRequestForm::clone(const char *target) const
+{
+	if (!target)
+		return (new RobotomyRequestForm(*this));
+	return (new RobotomyRequestForm(target));
+};

@@ -6,7 +6,7 @@
 /*   By: bruno-valero <bruno-valero@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 23:26:57 by bruno-valer       #+#    #+#             */
-/*   Updated: 2026/03/01 01:07:24 by bruno-valer      ###   ########.fr       */
+/*   Updated: 2026/03/01 18:37:19 by bruno-valer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ public:
 	~ShrubberyCreationForm(void);
 	ShrubberyCreationForm	&operator=(const ShrubberyCreationForm &other);
 	void					execute(const Bureaucrat &bureucrat);
+	AForm					*clone(const char *target) const;
 };
 
 #endif

@@ -78,6 +78,11 @@ const char	*AForm::FormNotSignedException::what() const throw()
 	return ("Form is not signed!");
 }
 
+const char	*AForm::InvalidFormException::what() const throw()
+{
+	return ("Invalid Form!");
+}
+
 std::ostream	&operator<<(std::ostream &os, const AForm &aform)
 {
 	os << "[ \n  " << aform.getName()

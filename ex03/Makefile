@@ -2,7 +2,7 @@ NAME = forms
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98 -g3
 
-FILES = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+FILES = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
 OBJS = $(FILES:%.cpp=%.o)
 
 # FLAGS

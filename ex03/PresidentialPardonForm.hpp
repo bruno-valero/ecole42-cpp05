@@ -6,7 +6,7 @@
 /*   By: bruno-valero <bruno-valero@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 23:25:39 by bruno-valer       #+#    #+#             */
-/*   Updated: 2026/03/01 01:09:01 by bruno-valer      ###   ########.fr       */
+/*   Updated: 2026/03/01 18:38:00 by bruno-valer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ public:
 	~PresidentialPardonForm(void);
 	PresidentialPardonForm	&operator=(const PresidentialPardonForm &other);
 	void					execute(const Bureaucrat &bureucrat);
+	AForm					*clone(const char *target) const;
 };
 
 #endif

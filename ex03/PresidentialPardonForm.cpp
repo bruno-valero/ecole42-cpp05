@@ -33,3 +33,10 @@ void					PresidentialPardonForm::execute(const Bureaucrat &bureucrat)
 	if (!getIsSigned()) throw FormNotSignedException();
 	std::cout << getTarget() << "foi perdoado por Zaphod Beeblebrox" << std::endl;
 };
+
+AForm					*PresidentialPardonForm::clone(const char *target) const
+{
+	if (!target)
+		return (new PresidentialPardonForm(*this));
+	return (new PresidentialPardonForm(target));
+};
